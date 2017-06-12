@@ -47,7 +47,7 @@ abstract class AbstractModuleLocator
      */
     protected function _locate()
     {
-        $configs = array();
+        $configs = [];
         foreach ($this->_getSources() as $_source) {
             $configs[md5($_source)] = $this->_read($_source);
         }

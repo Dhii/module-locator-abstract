@@ -19,7 +19,7 @@ abstract class AbstractFileLocator extends AbstractModuleLocator
      *
      * @var string[]
      */
-    protected $sources = array();
+    protected $sources = [];
 
     /**
      * Assigns the list of source file names.
