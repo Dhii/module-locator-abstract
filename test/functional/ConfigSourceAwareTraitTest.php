@@ -3,7 +3,6 @@
 namespace Dhii\Modular\Locator\FuncTest;
 
 use Xpmock\TestCase;
-use Dhii\Modular\Locator\ConfigSourceInterface;
 
 /**
  * Tests {@see \Dhii\Modular\Locator\ConfigSourceAwareTrait}.

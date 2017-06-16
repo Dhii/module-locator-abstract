@@ -16,7 +16,6 @@ class AbstractModuleLocatorExceptionTest extends TestCase
      */
     const TEST_SUBJECT_CLASSNAME = 'Dhii\\Modular\\Locator\\AbstractModuleLocatorException';
 
-
     /**
      * Creates a new instance of the test subject.
      *
