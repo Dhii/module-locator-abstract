@@ -10,6 +10,15 @@ namespace Dhii\Modular\Locator;
 trait ConfigSourceAwareTrait
 {
     /**
+     * A config source representation.
+     *
+     * @since [*next-version*]
+     *
+     * @var mixed
+     */
+    protected $configSource;
+
+    /**
      * Assigns the module config source.
      *
      * @since [*next-version*]
