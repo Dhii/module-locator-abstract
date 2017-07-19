@@ -49,7 +49,7 @@ abstract class AbstractModuleLocator
     {
         $configs = [];
         foreach ($this->_getSources() as $_source) {
-            $configs[md5($_source)] = $this->_read($_source);
+            $configs[$this->_generateKeyFromSource($_source)] = $this->_read($_source);
         }
 
         return $configs;
