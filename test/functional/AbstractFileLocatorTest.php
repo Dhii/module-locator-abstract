@@ -36,13 +36,16 @@ class AbstractFileLocatorTest extends TestCase
     public function createInstance($sources = array())
     {
         $mock = $this->mock(static::TEST_SUBJECT_CLASSNAME)
-            ->_read(function ($source) {
-                return file_get_contents($source);
-            })
+                ->_read(function ($source) {
+                    return file_get_contents($source);
+                })
+                ->_getSources(function () use ($sources) {
+                    return $sources;
+                })
+                ->_generateKeyFromSource(function ($source) {
+                    return md5($source);
+                })
             ->new();
-
-        $reflection = $this->reflect($mock);
-        $reflection->_setSources($sources);
 
         return $mock;
     }

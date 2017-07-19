@@ -64,8 +64,5 @@ abstract class AbstractModuleLocator
      *
      * @return string The key that identifies the source.
      */
-    protected function _generateKeyFromSource($configSource)
-    {
-        return md5($configSource);
-    }
+    abstract protected function _generateKeyFromSource($configSource);
 }
